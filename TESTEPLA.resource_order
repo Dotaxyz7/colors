@@ -18,6 +18,7 @@
   ],
   "ResourceOrderSettings":[
     {"name":"obj_camera","order":3,"path":"objects/obj_camera/obj_camera.yy",},
+    {"name":"obj_controle","order":5,"path":"objects/obj_controle/obj_controle.yy",},
     {"name":"obj_plataforma","order":2,"path":"objects/obj_plataforma/obj_plataforma.yy",},
     {"name":"obj_player_rastro","order":1,"path":"objects/obj_player_rastro/obj_player_rastro.yy",},
     {"name":"obj_vel","order":4,"path":"objects/obj_vel/obj_vel.yy",},

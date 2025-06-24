@@ -56,9 +56,6 @@ enum state {
 
 estado = state.parado
 
-if (!instance_exists(obj_camera)){
-    instance_create_layer(x,y, "Instances", obj_camera)
-}
 
 image_blend = c_white
 
