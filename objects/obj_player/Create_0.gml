@@ -24,7 +24,7 @@ parede_esq = false
 // Dash
 dura = room_speed/4
 dir=0
-carga = 1
+carga = 2
 set = 255
 
 // Pulo
@@ -61,3 +61,9 @@ if (!instance_exists(obj_camera)){
 }
 
 image_blend = c_white
+
+limite_recarga = room_speed // tempo no chão para recarregar (1 segundo)
+timer_recarga = 0
+max_carga = 1
+
+
