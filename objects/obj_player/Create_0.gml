@@ -62,18 +62,3 @@ image_blend = c_white
 limite_recarga = room_speed // tempo no chão para recarregar (1 segundo)
 timer_recarga = 0
 max_carga = 1
-
-// Tamanho de cada bloco de câmera
-grid_w = 480;
-grid_h = 320;
-
-// Armazena a posição-alvo da câmera
-cam_target_x = 0;
-cam_target_y = 0;
-
-// Atualiza pela primeira vez
-cam_target_x = (x div grid_w) * grid_w;
-cam_target_y = (y div grid_h) * grid_h;
-
-camera_set_view_pos(view_camera[0], cam_target_x, cam_target_y);
-

@@ -1,21 +1,3 @@
-// Verifica em qual "bloco" o player está
-var target_block_x = (x div grid_w) * grid_w;
-var target_block_y = (y div grid_h) * grid_h;
-
-// Se o player mudou de bloco, atualiza o destino da câmera
-if (target_block_x != cam_target_x || target_block_y != cam_target_y) {
-    cam_target_x = target_block_x;
-    cam_target_y = target_block_y;
-}
-
-// Faz interpolação suave da câmera
-var current_x = camera_get_view_x(view_camera[0]);
-var current_y = camera_get_view_y(view_camera[0]);
-
-var new_x = lerp(current_x, cam_target_x, 0.1);
-var new_y = lerp(current_y, cam_target_y, 0.1);
-
-camera_set_view_pos(view_camera[0], new_x, new_y);
 
 
 // === COLISÕES ===
