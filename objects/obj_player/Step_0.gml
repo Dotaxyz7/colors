@@ -1,4 +1,6 @@
-
+if (keyboard_check_pressed(vk_space)){
+	vida-=1
+}
 
 // === COLISÕES ===
 chao = place_meeting(x, y + 1, obj_plataforma);
@@ -160,6 +162,42 @@ case state.dash:
         vveloc = max_vveloc * sign(vveloc) * 0.5;
     }
 break;
+
+case state.morte:
+    if (criar_pedaco) {
+        for (var i = 0; i < 10; i++) {
+            var p = instance_create_layer(x, y, layer, obj_pedaco);
+            p.speed = random_range(1, 2);
+            p.direction = random(360);
+            p.image_angle = p.direction;
+            p.image_xscale = random_range(0.2, 0.6);
+            p.image_yscale = p.image_xscale;
+            p.dest_x = xstart;
+            p.dest_y = ystart;
+            lista[i] = p.id;
+            p.image_blend = make_color_hsv(50, set, 255);
+			
+
+            if (i >= 9) {
+                criar_pedaco = false;
+                p.criador = true;
+                p.lista = lista;
+                global.cam_alvo = p;
+                instance_destroy();
+				
+            }
+        }
+    }
+break;
+
+case state.voltar:
+    // Lógica futura para respawn, se quiser
+break;
+}
+
+// === VERIFICANDO MORTE ===
+if (vida <= 0 && estado != state.morte && estado != state.voltar) {
+    estado = state.morte;
 }
 
 // === RECARGA DE DASH ===
@@ -171,8 +209,7 @@ if (carga < max_carga) {
     }
 }
 
-// === DEBUG E COR ===
-show_debug_message(estado);
+
 
 switch (carga) {
     case 0: set = lerp(set, 50, 0.05); break;
@@ -182,3 +219,15 @@ switch (carga) {
 image_blend = make_color_hsv(50, set, 255);
 xscale = lerp(xscale, 1, 0.15);
 yscale = lerp(yscale, 1, 0.15);
+
+if (!estava_no_ar && !chao) {
+    estava_no_ar = true;
+}
+
+if (estava_no_ar && chao) {
+    audio_play_sound(snd_queda, 0, false);
+    estava_no_ar = false;
+}
+
+	
+

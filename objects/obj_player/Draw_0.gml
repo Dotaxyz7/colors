@@ -12,6 +12,7 @@ var texto = string(carga);
 var altura = y - sprite_height * yscale - 20;
 
 // Estilo
+draw_set_font(-1)
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 
@@ -35,3 +36,21 @@ if (carga < max_carga) {
     draw_set_color(c_red);
     draw_text(x, altura_crono, string(segundos_restantes) + "s");
 }
+
+/*
+if (carga < max_carga) {
+    var altura_barra = y - sprite_height * yscale - 10; // altura da barra
+    var largura = 32;
+    var altura_b = 6;
+
+    var porcentagem = timer_recarga / limite_recarga;
+
+    // Fundo preto sólido
+    draw_set_color(c_black);
+    draw_rectangle(x - largura / 2, altura_barra, x + largura / 2, altura_barra + altura_b, true);
+
+    // Barra branca sólida preenchendo conforme porcentagem
+    draw_set_color(c_white);
+    draw_rectangle(x - largura / 2, altura_barra, x - largura / 2 + (largura * porcentagem), altura_barra + altura_b, true);
+}
+  

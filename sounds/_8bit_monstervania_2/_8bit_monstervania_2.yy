@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"_8bit_monstervania_2",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":120.03265,
+  "name":"_8bit_monstervania_2",
+  "parent":{
+    "name":"Sons",
+    "path":"folders/Sons.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"_8bit_monstervania_2.mp3",
+  "type":0,
+  "volume":1.0,
+}

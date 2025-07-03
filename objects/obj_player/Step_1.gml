@@ -5,6 +5,3 @@ if (temp && !chao){
     yscale = .8
 }
 
-if keyboard_check_pressed(vk_enter){
-    game_restart()
-}

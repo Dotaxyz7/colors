@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"New_Age_Whale__Moody__25_de_jun_de_2025_2256",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":67.41608,
+  "name":"New_Age_Whale__Moody__25_de_jun_de_2025_2256",
+  "parent":{
+    "name":"Sons",
+    "path":"folders/Sons.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"New_Age_Whale__Moody__25_de_jun_de_2025_2256.wav",
+  "type":0,
+  "volume":1.0,
+}

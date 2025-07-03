@@ -46,13 +46,19 @@ yscale = 1
 
 // Direção de olhar
 ver = 1
+// === SISTEMA DE MORTE ===
+criar_pedaco = true;
+lista = noone;
 
-// Máquina de estados
+// Atualiza o enum com os novos estados
 enum state {
     parado,
     movendo,
-    dash
+    dash,
+    morte,
+    voltar
 }
+
 
 estado = state.parado
 
@@ -62,3 +68,9 @@ image_blend = c_white
 limite_recarga = room_speed // tempo no chão para recarregar (1 segundo)
 timer_recarga = 0
 max_carga = 1
+
+estava_no_ar = false;
+som_corre_tocando = false;
+id_som_corre = -1;
+
+vida=1
